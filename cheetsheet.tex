@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{amsmath} %bmatrix!!!!
 %\usepackage{xcolor}
 \usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=4cm]{geometry}
 
@@ -30,9 +31,28 @@ Für die Adjunkte gilt folgende Beziehung:
 \[ adj(A) = Cof(A)^{T} \]
 Für die Ermittlung der Kofaktormatrix wird der Formalismus des Laplace'schen Entwicklungssatzes benötigt. \\
 Laplace'scher Entwicklungssatz:
-\[ \sum_{i=0}^{n}(-1)^{i+j} \cdot a_{ij} \cdot det(A_{ij}) \ \ Entwicklung \ nach \ der \ j-ten \ Spalte\]
+\[ \sum_{i=1}^{n}(-1)^{i+j} \cdot a_{ij} \cdot det(A_{ij}) \ \ Entwicklung \ nach \ der \ j-ten \ Spalte\]
 oder
-\[ \sum_{j=0}^{n}(-1)^{i+j} \cdot a_{ij} \cdot det(A_{ij}) \ \ Entwicklung \ nach \ der \ i-ten \ Zeile\]
+\[ \sum_{j=1}^{n}(-1)^{i+j} \cdot a_{ij} \cdot det(A_{ij}) \ \ Entwicklung \ nach \ der \ i-ten \ Zeile\]
+
+\underline{Berechung der Kofaktormatrix:}
+
+\[\sum_{i=1,j=1}^{n} det(D_{i,j}) \]... Summe der Unterdeterminaten von Matrix A. 
+\[Cof(A)=
+\begin{bmatrix}
+   A_{11}&...&A_{1n}\\
+   \vdots & \ddots&\\
+   A_{N1}&...&A_{NN}
+\end{bmatrix}
+\]
+
+\(Cof(A)\) wird wie folgt befüllt:
+\[A_{ij}=(-1)^{i+j}det(D_{ij})\] 
+
+\begin{flushright}
+\vspace{-0.9cm}  ... Unterdeterminante
+\end{flushright}
+
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
